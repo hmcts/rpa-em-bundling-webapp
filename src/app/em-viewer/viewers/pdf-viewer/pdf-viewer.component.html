@@ -1,0 +1,13 @@
+<div>
+  <pdf-viewer *ngIf="src"
+              [src]="src"
+              [page]="page"
+              [show-all]="false"
+              [fit-to-page]="true"
+              [original-size]="false"
+              [autoresize]="true"
+              [render-text]="true"
+              (after-load-complete)="afterPdfLoadComplete($event)"
+              (page-rendered)="afterPageRendered($event)">
+  </pdf-viewer>
+</div>

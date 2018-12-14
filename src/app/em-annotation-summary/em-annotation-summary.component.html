@@ -1,0 +1,23 @@
+
+<h1 class="heading-large" *ngIf="docName" data-hook="em.anno.summary.docName">{{docName}}</h1>
+
+<div data-hook="em.anno.summary.annotation" [ngClass]="{'column-full': true, 'grid-row': true}" *ngFor="let anno of annotations">
+  <h1 class="heading-large">Page {{anno.page}}</h1>
+  <h3 class="heading-small" data-hook="em.anno.summary.annotation.createdBy">Created by: {{anno.createdBy}}</h3>
+  <h3 class="heading-small" data-hook="em.anno.summary.annotation.createdOn">Created on: {{anno.createdOn | date: 'd/M/yy, h:mm a'}}</h3>
+  <h3 class="heading-small" data-hook="em.anno.summary.annotation.modifiedOn">Last Modified on: {{anno.modifiedOn | date: 'd/M/yy, h:mm a'}}</h3>
+  <p class="lede">
+    {{anno.comments[0].content}}
+  </p>
+  <hr>
+</div>
+
+<div class="grid-row">
+  <div *ngIf="error"  class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+    <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">Something went wrong!</h2>
+    <p *ngIf="error.status">Response status was {{error.status}}.</p>
+    <ul class="error-summary-list">
+      <li><a href="javascript:history.back()">Go Back</a></li>
+    </ul>
+  </div>
+</div>
