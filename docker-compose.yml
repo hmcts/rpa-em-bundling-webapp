@@ -1,14 +1,14 @@
 version: '2.1'
 
 services:
-  em-viewer-web:
+  rpa-em-bundling-webapp:
     build:
       context: .
       args:
         - http_proxy
         - https_proxy
         - no_proxy
-    image: docker.artifactory.reform.hmcts.net/evidence/em-viewer-web:latest
+    image: docker.artifactory.reform.hmcts.net/evidence/rpa-em-bundling-webapp:latest
     environment:
     - NODE_ENV=development
     - PORT=8080
