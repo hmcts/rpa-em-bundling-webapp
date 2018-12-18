@@ -1,4 +1,4 @@
-import { CaseDocument } from "../../case-documents/shared/casedocument"; // TODO Change this
+import { CaseDocument } from './casedocument';
 
 export class Bundle {
     id: number;

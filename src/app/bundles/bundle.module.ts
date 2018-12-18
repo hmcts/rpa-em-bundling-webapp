@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BundleRoutingModule } from './bundle-routing.module';
 import { BundlePageComponent } from './bundle-page/bundle-page.component';
 import { BundleDetailsComponent } from './bundle-details/bundle-details.component';
+import { DocumentSelectionComponent } from './document-selection/document-selection.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { BundleDetailsComponent } from './bundle-details/bundle-details.componen
   ],
   declarations: [
     BundlePageComponent,
-    BundleDetailsComponent
+    BundleDetailsComponent,
+    DocumentSelectionComponent
   ]
 })
 export class BundleModule { }

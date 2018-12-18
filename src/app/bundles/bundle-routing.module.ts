@@ -3,11 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { BundlePageComponent } from './bundle-page/bundle-page.component';
 import { BundleDetailsComponent } from './bundle-details/bundle-details.component';
+import { DocumentSelectionComponent } from './document-selection/document-selection.component';
 
 const routes: Routes = [
-  {path: 'details', component: BundleDetailsComponent},
   {path: 'details:id', component: BundleDetailsComponent},
   {path: 'page:id', component: BundlePageComponent},
+  {path: 'import:id', component: DocumentSelectionComponent},
   {path: '', redirectTo: 'page:id', pathMatch: 'full'},
 ];
 

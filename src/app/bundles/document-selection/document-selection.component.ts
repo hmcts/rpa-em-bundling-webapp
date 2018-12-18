@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MockCaseDocuments } from '../shared/mockcasedocumentdata';
 
 @Component({
-  selector: 'app-document-selector',
-  templateUrl: './document-selector.component.html',
-  styleUrls: ['./document-selector.component.scss']
+  selector: 'app-document-selection',
+  templateUrl: './document-selection.component.html',
+  styleUrls: ['./document-selection.component.scss']
 })
-export class DocumentSelectorComponent implements OnInit {
+export class DocumentSelectionComponent implements OnInit {
 
   cases = MockCaseDocuments;
 

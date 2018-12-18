@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DocumentSelectorComponent } from './document-selector.component';
+import { DocumentSelectionComponent } from './document-selection.component';
 
-describe('DocumentSelectorComponent', () => {
-  let component: DocumentSelectorComponent;
-  let fixture: ComponentFixture<DocumentSelectorComponent>;
+describe('DocumentSelectionComponent', () => {
+  let component: DocumentSelectionComponent;
+  let fixture: ComponentFixture<DocumentSelectionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DocumentSelectorComponent ]
+      declarations: [ DocumentSelectionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DocumentSelectorComponent);
+    fixture = TestBed.createComponent(DocumentSelectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
