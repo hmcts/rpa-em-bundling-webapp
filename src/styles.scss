@@ -2,7 +2,8 @@
 $path: "/public/images/";
 @import 'govuk-elements';
 
-
+// The next line's file is actually called _all.scss, but angular adds an extra _ to the name for some reason
+@import '../node_modules/govuk-frontend/components/all.scss'; 
 a {
   cursor: pointer;
 }
@@ -18,5 +19,3 @@ a {
   right: 0;
   bottom: 0;
 }
-
-
