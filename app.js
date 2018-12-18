@@ -36,7 +36,7 @@ app.get("/config", (req, res) => {
   res.send(config);
 });
 
-const port = process.env.PORT || "3621";
+const port = process.env.PORT || "3622";
 const server = http.createServer(app);
 app.set("port", port);
 server.listen(port);

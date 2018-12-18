@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UnsupportedViewerComponent } from './unsupported-viewer.component';
+import { CaseSelectorComponent } from './case-selector.component';
 
-describe('UnsupportedViewerComponent', () => {
-  let component: UnsupportedViewerComponent;
-  let fixture: ComponentFixture<UnsupportedViewerComponent>;
+describe('CaseSelectorComponent', () => {
+  let component: CaseSelectorComponent;
+  let fixture: ComponentFixture<CaseSelectorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UnsupportedViewerComponent ]
+      declarations: [ CaseSelectorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UnsupportedViewerComponent);
+    fixture = TestBed.createComponent(CaseSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

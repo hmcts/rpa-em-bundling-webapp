@@ -4,40 +4,23 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {AppConfig} from './app.config';
-import {EmViewerRouteComponent} from './em-viewer/em-viewer-route.component';
-import {EmAnnotationSummaryRouteComponent} from './em-annotation-summary/em-annotation-summary-route.component';
-import {EmViewerModule} from './em-viewer/em-viewer.module';
-import {EmAnnotationSummaryModule} from './em-annotation-summary/em-annotation-summary.module';
+import { CaseSelectorComponent } from './case-selector/case-selector.component';
 
-const appRoutes: Routes = [
-  {path: 'summary', component: EmAnnotationSummaryRouteComponent},
-  {path: '', component: EmViewerRouteComponent}
-];
+// const appRoutes: Routes = [];
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmViewerRouteComponent,
-    EmAnnotationSummaryRouteComponent
+    CaseSelectorComponent
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes,
-      {enableTracing: true} // <-- debugging purposes only
-    ),
-    EmViewerModule,
-    EmAnnotationSummaryModule,
+    // RouterModule.forRoot(
+    //   appRoutes,
+    //   {enableTracing: true} // <-- debugging purposes only
+    // ),
     BrowserModule
   ],
-  providers: [
-    AppConfig,
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (config: AppConfig) => () => config.load(),
-      deps: [AppConfig],
-      multi: true
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
