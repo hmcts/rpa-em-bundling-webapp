@@ -1,24 +1,20 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {APP_INITIALIZER, NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+// import {APP_INITIALIZER} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {AppConfig} from './app.config';
-import { CaseSelectorComponent } from './case-selector/case-selector.component';
-
-// const appRoutes: Routes = [];
+import { AppRoutingModule } from './app-routing.module';
+// import { BundlesComponent } from './bundles/bundles.component'; TODO DELETE THIS
+// import {AppConfig} from './app.config'; // TODO What is this for?
 
 @NgModule({
   declarations: [
     AppComponent,
-    CaseSelectorComponent
   ],
   imports: [
-    // RouterModule.forRoot(
-    //   appRoutes,
-    //   {enableTracing: true} // <-- debugging purposes only
-    // ),
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
+    // BrowserAnimationsModule & HttpClientModule excluded
   ],
   providers: [],
   bootstrap: [AppComponent]

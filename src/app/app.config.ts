@@ -39,7 +39,7 @@ export class AppConfig {
   }
 
   getAnnotationUrl() {
-    return this.config.annotation_url;
+    return this.config.annotation_url; // TODO Remove this stuff
   }
 }
 

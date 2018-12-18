@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CaseSelectorComponent } from './case-selector.component';
+import { BundleDetailsComponent } from './bundle-details.component';
 
-describe('CaseSelectorComponent', () => {
-  let component: CaseSelectorComponent;
-  let fixture: ComponentFixture<CaseSelectorComponent>;
+describe('BundleDetailsComponent', () => {
+  let component: BundleDetailsComponent;
+  let fixture: ComponentFixture<BundleDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CaseSelectorComponent ]
+      declarations: [ BundleDetailsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CaseSelectorComponent);
+    fixture = TestBed.createComponent(BundleDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
