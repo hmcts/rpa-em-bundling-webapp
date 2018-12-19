@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { MockCaseDocuments } from '../shared/mockcasedocumentdata';
 
 @Component({
@@ -12,24 +12,20 @@ export class DocumentSelectionComponent implements OnInit {
   selectAllStatus: boolean;
   checked: boolean;
 
-  @ViewChild('checkbox') private checkbox;
   constructor() { }
 
   ngOnInit() {
     this.selectAllStatus = false;
-    this.checkbox.checked = false;
+    this.checked = false;
   }
 
   selectAll() {
-    // this.updateSelectAllStatus();
     this.selectAllStatus = !this.selectAllStatus;
-    this.checkbox.checked = this.selectAllStatus;
-    console.log(this.selectAllStatus + '-' + this.checkbox.checked);
+    this.checked = this.selectAllStatus;
   }
 
   updateSelectAll() {
     this.selectAllStatus = false;
-    console.log(this.selectAllStatus + '-' + this.checkbox.checked);
   }
 
 
