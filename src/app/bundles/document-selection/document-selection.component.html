@@ -6,7 +6,7 @@
     <th class="govuk-table__header" scope="col">
       <div class="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
-          <input type="checkbox" class="govuk-checkboxes__input" [checked]="selectAllStatus" (click)="selectAll()">
+          <input type="checkbox" class="govuk-checkboxes__input" id="select-all" [checked]="selectAllStatus" (click)="selectAll()">
           <label class="govuk-label__header govuk-checkboxes__label">Select All</label>
         </div>
       </div>
@@ -22,7 +22,7 @@
     <td class="govuk-table__cell">
       <div class="govuk-checkboxes">
         <div class="govuk-checkboxes__item">
-          <input type="checkbox" class="govuk-checkboxes__input" id="{{case.id}}" [checked]="selectAllStatus">
+          <input #input type="checkbox" class="govuk-checkboxes__input" id="{{case.id}}" [checked]="checked" (change)="updateSelectAll()">
           <label class="govuk-label govuk-checkboxes__label">
           </label>
         </div>
