@@ -9,10 +9,15 @@ import { MockCaseDocuments } from '../shared/mockcasedocumentdata';
 export class DocumentSelectionComponent implements OnInit {
 
   cases = MockCaseDocuments;
-
+  selectAllStatus: boolean;
   constructor() { }
 
   ngOnInit() {
+    this.selectAllStatus = false;
+  }
+
+  selectAll() {
+    this.selectAllStatus = !this.selectAllStatus;
   }
 
 }
