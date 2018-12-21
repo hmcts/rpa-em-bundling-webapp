@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
 import { MockCaseDocuments } from '../shared/mockcasedocumentdata';
+import {DocumentItemComponent} from './document-item/document-item.component';
 
 @Component({
   selector: 'app-document-selection',
@@ -8,33 +9,31 @@ import { MockCaseDocuments } from '../shared/mockcasedocumentdata';
 })
 export class DocumentSelectionComponent implements OnInit {
 
-  cases = MockCaseDocuments;
+  documents = MockCaseDocuments;
   selectAllStatus: boolean;
-  checked: boolean;
+
+  @ViewChildren('documentItem') documentItem: QueryList<DocumentItemComponent>;
 
   constructor() { }
 
   ngOnInit() {
     this.selectAllStatus = false;
-    this.checked = false;
-  }
-
-  selectAll() {
-    this.selectAllStatus = !this.selectAllStatus;
-    this.checked = this.selectAllStatus;
   }
 
   updateSelectAll() {
-    this.selectAllStatus = false;
+    this.selectAllStatus = !this.selectAllStatus;
+    this.documentItem.map((document: DocumentItemComponent) => document.checked = this.selectAllStatus);
   }
 
-
-  // updateSelectAllStatus() {
-  //   allAreEmpty = true
-  //   for doc in docs:
-  //     if doc.checked = true
-  //       allAreEmpty = false
-  //   this.selectAllStatus = false
+  // checkSelectAllStatus() {
+  //   this.selectAllStatus = this.checkSelectedCheckboxes() !== null;
   // }
 
+  // checkSelectedCheckboxes() {
+  //   this.documentItem.map((document: DocumentItemComponent) => {
+  //     if (document.checked === false) {
+  //       return false;
+  //     }
+  //   });
+  // }
 }
