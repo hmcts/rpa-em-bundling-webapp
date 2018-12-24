@@ -1,8 +1,12 @@
 .govuk-checkboxes__label {
-    font-weight: 700;
-  }
-  
-  td {
-    vertical-align: middle;
-  }
-    
+  font-weight: 700;
+}
+
+app-document-item {
+  display: contents;
+  vertical-align: middle;
+}
+
+td {
+  vertical-align: middle;
+}
