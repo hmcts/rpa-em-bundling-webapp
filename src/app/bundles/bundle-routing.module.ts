@@ -6,9 +6,9 @@ import { BundleDetailsComponent } from './bundle-details/bundle-details.componen
 import { DocumentSelectionComponent } from './document-selection/document-selection.component';
 
 const routes: Routes = [
-  {path: 'details:id', component: BundleDetailsComponent},
-  {path: 'page:id', component: BundlePageComponent},
-  {path: 'import:id', component: DocumentSelectionComponent},
+  {path: 'detail/:id', component: BundleDetailsComponent},
+  {path: 'page/:id', component: BundlePageComponent},
+  {path: 'import/:id', component: DocumentSelectionComponent},
   {path: '', redirectTo: 'page:id', pathMatch: 'full'},
 ];
 
