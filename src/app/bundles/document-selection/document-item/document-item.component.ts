@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class DocumentItemComponent implements OnInit {
 
-  checked;
+  checked: boolean;
 
   @Input() document;
 

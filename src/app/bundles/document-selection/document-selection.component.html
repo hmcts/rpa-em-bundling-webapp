@@ -17,8 +17,8 @@
   <tr class="govuk-table__row" *ngFor="let document of documents">
     <app-document-item
       #documentItem
-      [document]="document">
-      <!--(change)="checkSelectAllStatus()">-->
+      [document]="document"
+      (change)="isAllCheckboxSelected()">
     </app-document-item>
   </tr>
   </tbody>

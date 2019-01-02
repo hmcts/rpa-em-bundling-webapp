@@ -25,15 +25,12 @@ export class DocumentSelectionComponent implements OnInit {
     this.documentItem.map((document: DocumentItemComponent) => document.checked = this.selectAllStatus);
   }
 
-  // checkSelectAllStatus() {
-  //   this.selectAllStatus = this.checkSelectedCheckboxes() !== null;
-  // }
-
-  // checkSelectedCheckboxes() {
-  //   this.documentItem.map((document: DocumentItemComponent) => {
-  //     if (document.checked === false) {
-  //       return false;
-  //     }
-  //   });
-  // }
+  isAllCheckboxSelected() {
+    this.selectAllStatus = true;
+    this.documentItem.map((document: DocumentItemComponent) => {
+      if (document.checked === false) {
+        this.selectAllStatus = false;
+      }
+    });
+  }
 }
