@@ -1,26 +1,28 @@
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-  <tr class="govuk-table__row">
-    <th class="govuk-table__header" scope="col">Document Name</th>
-    <th class="govuk-table__header" scope="col">View</th>
-    <th class="govuk-table__header" scope="col">
-      <div class="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input type="checkbox" class="govuk-checkboxes__input" id="select-all" [checked]="selectAllStatus" (click)="updateSelectAll()">
-          <label class="govuk-label__header govuk-checkboxes__label">Select All</label>
+<div class="govuk-width-container">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Document Name</th>
+      <th class="govuk-table__header" scope="col">View</th>
+      <th class="govuk-table__header" scope="col">
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input type="checkbox" class="govuk-checkboxes__input" id="select-all" [checked]="selectAllStatus" (click)="updateSelectAll()">
+            <label class="govuk-label__header govuk-checkboxes__label">Select All</label>
+          </div>
         </div>
-      </div>
-    </th>
-  </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-  <tr class="govuk-table__row" *ngFor="let document of documents">
-    <app-document-item
-      #documentItem
-      [document]="document"
-      (change)="isAllCheckboxSelected()">
-    </app-document-item>
-  </tr>
-  </tbody>
-</table>
-<a routerLink="/bundle/detail/:id" class="govuk-button" id="next" (click)="selectedCheckbox()">Next</a>
+      </th>
+    </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row" *ngFor="let document of documents">
+      <app-document-item
+        #documentItem
+        [document]="document"
+        (change)="isAllCheckboxSelected()">
+      </app-document-item>
+    </tr>
+    </tbody>
+  </table>
+  <a routerLink="/bundle/detail/:id" class="govuk-button" id="next" (click)="selectedCheckbox()">Next</a>
+</div>

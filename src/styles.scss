@@ -9,6 +9,10 @@ a {
   cursor: pointer;
 }
 
+body {
+  margin: 0;
+}
+
 .button-warning{
   @include button($grey-2);
 }
