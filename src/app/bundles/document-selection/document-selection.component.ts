@@ -33,4 +33,14 @@ export class DocumentSelectionComponent implements OnInit {
       }
     });
   }
+
+  selectedCheckbox() {
+    let arr1 = [];
+    this.documentItem.map((document: DocumentItemComponent) => {
+      if (document.checked === true) {
+        arr1.push(document);
+      }
+    });
+    console.log(arr1);
+  }
 }
