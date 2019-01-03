@@ -7347,7 +7347,7 @@ source-map@0.5.x, source-map@^0.5.3, source-map@^0.5.6, source-map@~0.5.1:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
-source-map@0.7.3:
+source-map@0.7.3, source-map@^0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
 
@@ -7905,6 +7905,15 @@ tsconfig@^6.0.0:
   dependencies:
     strip-bom "^3.0.0"
     strip-json-comments "^2.0.0"
+
+tsickle@^0.34.0:
+  version "0.34.0"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.34.0.tgz#10187fa6401a288a65efb93a60bf28b2ff95f90b"
+  integrity sha512-O3wCPRtL18Hc/ZBnaiKwmmjVzeCWTOTpsi0btfC7FWL3RnXpxLPxD6hoJ0QEXuSfG/0QJk+MWNjqT9N6fOyyIg==
+  dependencies:
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    source-map "^0.7.3"
 
 tslib@^1.7.1, tslib@^1.8.0:
   version "1.8.1"
@@ -8733,9 +8742,10 @@ yargs@~3.15.0:
     decamelize "^1.0.0"
     window-size "^0.1.1"
 
-yarn@1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.2.1.tgz#0d628dc01438881a1663a6f83cbf7ac5db7a75fc"
+yarn@1.12.3:
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.12.3.tgz#fb4599bf1f8da01552bcc7e1571dfd4e53788203"
+  integrity sha512-8f5rWNDvkhAmCxmn8C0LsNWMxTYVk4VGKiq0sIB6HGZjaZTHsGIH87SUmVDUEd2Wk54bqKoUlbVWgQFCQhRkVw==
 
 yauzl@2.4.1:
   version "2.4.1"
