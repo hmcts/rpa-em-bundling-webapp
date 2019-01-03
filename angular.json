@@ -26,7 +26,6 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/assets",
               {
                 "glob": "**/*",
                 "input": "node_modules/govuk-frontend/assets",

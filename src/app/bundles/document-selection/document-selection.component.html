@@ -1,33 +1,38 @@
-<table class="govuk-table">
-  <thead class="govuk-table__head">
-  <tr class="govuk-table__row">
-    <th class="govuk-table__header" scope="col">Document Name</th>
-    <th class="govuk-table__header" scope="col">View</th>
-    <th class="govuk-table__header" scope="col">
-      <div class="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input type="checkbox" class="govuk-checkboxes__input">
-          <label class="govuk-label__header govuk-checkboxes__label">Select All</label>
+<div id="govuk-panel">
+  <div class="govuk-width-container">
+    <h1 class="govuk-panel__title">
+      Bundle Name
+    </h1>
+    <div class="govuk-panel__body">
+      bundle description
+    </div>
+  </div>
+</div>
+<div class="govuk-width-container">
+  <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Document Name</th>
+      <th class="govuk-table__header" scope="col">View</th>
+      <th class="govuk-table__header" scope="col">
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input type="checkbox" class="govuk-checkboxes__input" id="select-all" [checked]="selectAllStatus" (click)="updateSelectAll()">
+            <label class="govuk-label__header govuk-checkboxes__label">Select All</label>
+          </div>
         </div>
-      </div>
-    </th>
-  </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-  <tr class="govuk-table__row" *ngFor="let case of cases">
-    <th class="govuk-table__header" scope="row">{{case.name}}</th>
-    <td class="govuk-table__cell">
-      <button class="govuk-button" [value]="case.DM_URI">View</button>
-    </td>
-    <td class="govuk-table__cell">
-      <div class="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input type="checkbox" class="govuk-checkboxes__input">
-          <label class="govuk-label govuk-checkboxes__label">
-          </label>
-        </div>
-      </div>
-    </td>
-  </tr>
-  </tbody>
-</table>
+      </th>
+    </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+    <tr class="govuk-table__row" *ngFor="let document of documents">
+      <app-document-item
+        #documentItem
+        [document]="document"
+        (change)="checkAllCheckboxSelected()">
+      </app-document-item>
+    </tr>
+    </tbody>
+  </table>
+  <a routerLink="/bundle/detail/:id" class="govuk-button" id="next" (click)="selectedCheckbox()">Next</a>
+</div>
