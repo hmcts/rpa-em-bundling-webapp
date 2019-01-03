@@ -1,3 +1,30 @@
-<p>
-  bundle-details works!
-</p>
+<div id="govuk-panel">
+  <div class="govuk-width-container">
+    <h1 class="govuk-panel__title">
+      Bundle Details
+    </h1>
+    <div class="govuk-panel__body">
+      Name bundle and provide description
+    </div>
+  </div>
+</div>
+<div class="govuk-width-container">
+  <div id="bundle-details-container">
+    <div class="govuk-form-group">
+      <div id="bundle-name">
+        <label class="govuk-label" for="name">
+          Bundle name
+        </label>
+        <input class="govuk-input" id="name" name="name" type="text" [(ngModel)]="bundleName">
+      </div>
+      <div id="bundle-description">
+        <label class="govuk-label" for="more-detail">
+          Bundle description
+        </label>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" [(ngModel)]="bundleDescription"></textarea>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/bundle/import/:id" class="govuk-button" id="back" (click)="this.location.back()">Back</a>
+  <a routerLink="/bundle/import/:id" class="govuk-button" id="next" (click)="saveBundleDetails()">Save</a>
+</div>

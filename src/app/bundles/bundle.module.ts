@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { BundleRoutingModule } from './bundle-routing.module';
 import { BundlePageComponent } from './bundle-page/bundle-page.component';
@@ -11,6 +12,7 @@ import { PanelComponent } from './shared/panel/panel.component';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     BundleRoutingModule
   ],
   declarations: [

@@ -1,0 +1,33 @@
+#govuk-panel {
+  background-color: #005ea5;
+  color: white;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+#bundle-details-container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) {
+  #bundle-details-container {
+    width: 100%;
+  }
+
+  #govuk-panel {
+    padding: 3rem 0;
+  }
+}
+
+#bundle-name {
+  padding-top: 20px;
+}
+
+#bundle-description {
+  padding-top: 20px;
+}
+
+#next {
+  float: right;
+}
