@@ -9,7 +9,7 @@ const routes: Routes = [
   {path: 'detail/:id', component: BundleDetailsComponent},
   {path: 'page/:id', component: BundlePageComponent},
   {path: 'import/:id', component: DocumentSelectionComponent},
-  {path: '', redirectTo: 'page:id', pathMatch: 'full'},
+  {path: '', redirectTo: 'page/:id', pathMatch: 'full'},
 ];
 
 @NgModule({

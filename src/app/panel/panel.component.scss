@@ -1,0 +1,12 @@
+#govuk-panel {
+  background-color: #005ea5;
+  color: white;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+  #govuk-panel {
+    padding: 3rem 0;
+  }
+}

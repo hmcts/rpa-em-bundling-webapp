@@ -6,6 +6,7 @@ import { BundlePageComponent } from './bundle-page/bundle-page.component';
 import { BundleDetailsComponent } from './bundle-details/bundle-details.component';
 import { DocumentSelectionComponent } from './document-selection/document-selection.component';
 import { DocumentItemComponent } from './document-selection/document-item/document-item.component';
+import {PanelComponent} from '../panel/panel.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { DocumentItemComponent } from './document-selection/document-item/docume
     BundleDetailsComponent,
     DocumentSelectionComponent,
     DocumentItemComponent
+    PanelComponent
   ]
 })
 export class BundleModule { }

@@ -15,7 +15,9 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+
+    // BundleModule,
+    AppRoutingModule,
     // BrowserAnimationsModule & HttpClientModule excluded
   ],
   providers: [],
