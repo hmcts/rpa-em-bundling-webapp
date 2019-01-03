@@ -22,10 +22,10 @@ export class DocumentSelectionComponent implements OnInit {
 
   updateSelectAll() {
     this.selectAllStatus = !this.selectAllStatus;
-    this.documentItem.map((document: DocumentItemComponent) => document.checked = this.selectAllStatus);
+    this.documentItem.forEach((document: DocumentItemComponent) => document.checked = this.selectAllStatus);
   }
 
-  isAllCheckboxSelected() {
+  checkAllCheckboxSelected() {
     this.selectAllStatus = true;
     this.documentItem.map((document: DocumentItemComponent) => {
       if (document.checked === false) {
@@ -35,12 +35,7 @@ export class DocumentSelectionComponent implements OnInit {
   }
 
   selectedCheckbox() {
-    let arr1 = [];
-    this.documentItem.map((document: DocumentItemComponent) => {
-      if (document.checked === true) {
-        arr1.push(document);
-      }
-    });
+    const arr1 = this.documentItem.filter((document: DocumentItemComponent) => document.checked === true);
     console.log(arr1);
   }
 }
