@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BundleDetailsComponent implements OnInit {
 
-  bundleName: string;
-  bundleDescription: string;
+  name: string;
+  description: string;
 
   constructor() { }
 
@@ -16,7 +16,7 @@ export class BundleDetailsComponent implements OnInit {
   }
 
   saveBundleDetails() {
-    console.log('name: ' + this.bundleName + ' bundle description: ' + this.bundleDescription);
+    console.log('name: ' + this.name + ' bundle description: ' + this.description);
   }
 
 }
