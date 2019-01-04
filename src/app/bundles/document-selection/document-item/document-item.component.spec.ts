@@ -6,6 +6,8 @@ describe('DocumentItemComponent', () => {
   let component: DocumentItemComponent;
   let fixture: ComponentFixture<DocumentItemComponent>;
 
+  const document = { id: 1, name: 'Marriage Certificate', DM_URI: 'example_url', folder: 'Certificates' };
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DocumentItemComponent ]
@@ -16,6 +18,8 @@ describe('DocumentItemComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DocumentItemComponent);
     component = fixture.componentInstance;
+    component.document = document;
+
     fixture.detectChanges();
   });
 
