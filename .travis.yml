@@ -20,7 +20,6 @@ script:
 - yarn install
 - yarn setup
 - yarn lint
-- yarn test:nsp-warn
 - yarn test:coverage
 after_success:
 - yarn test:codacy-upload
