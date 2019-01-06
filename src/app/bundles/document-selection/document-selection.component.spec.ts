@@ -19,10 +19,10 @@ describe('DocumentSelectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DocumentSelectionComponent, DocumentItemComponent ],
+      declarations: [DocumentSelectionComponent, DocumentItemComponent],
       schemas: [NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

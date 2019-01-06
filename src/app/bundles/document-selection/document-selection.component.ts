@@ -1,6 +1,6 @@
-import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { MockCaseDocuments } from '../shared/mockcasedocumentdata';
-import {DocumentItemComponent} from './document-item/document-item.component';
+import { DocumentItemComponent } from './document-item/document-item.component';
 
 @Component({
   selector: 'app-document-selection',
@@ -14,7 +14,8 @@ export class DocumentSelectionComponent implements OnInit {
 
   @ViewChildren('documentItem') documentItem: QueryList<DocumentItemComponent>;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.selectAllStatus = false;

@@ -8,9 +8,9 @@ describe('BundlePageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BundlePageComponent ]
+      declarations: [BundlePageComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

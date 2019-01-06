@@ -8,19 +8,28 @@ import { BundleDetailsComponent } from './bundle-details/bundle-details.componen
 import { DocumentSelectionComponent } from './document-selection/document-selection.component';
 import { DocumentItemComponent } from './document-selection/document-item/document-item.component';
 import { PanelComponent } from './shared/panel/panel.component';
+import { BundleDocumentsComponent } from "./bundle-page/documents/documents.component";
+import { StoreModule } from '@ngrx/store';
+import { bundleReducer } from "./bundle-page/bundle-page.reducer";
+import { BundleService } from "./shared/bundle.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   imports: [
+    StoreModule.forRoot({ bundle: bundleReducer }),
     CommonModule,
+    HttpClientModule,
     FormsModule,
     BundleRoutingModule
   ],
   declarations: [
     BundlePageComponent,
+    BundleDocumentsComponent,
     BundleDetailsComponent,
     DocumentSelectionComponent,
     DocumentItemComponent,
     PanelComponent
-  ]
+  ],
+  providers: [BundleService]
 })
-export class BundleModule { }
+export class BundleModule {}

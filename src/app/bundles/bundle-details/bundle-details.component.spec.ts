@@ -19,7 +19,7 @@ describe('BundleDetailsComponent', () => {
         { provide: LocationStrategy, useClass: PathLocationStrategy },
       ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
