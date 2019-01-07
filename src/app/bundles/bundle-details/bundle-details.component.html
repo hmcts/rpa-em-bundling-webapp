@@ -2,7 +2,7 @@
 <div class="govuk-width-container">
   <div id="bundle-details-container">
     <form>
-      <div [className]="bundleName.touched && !bundleName.valid ? 'govuk-form-group govuk-form-group--error' : 'govuk-form-group'">
+      <div [ngClass]="bundleName.touched && !bundleName.valid ? 'govuk-form-group govuk-form-group--error' : 'govuk-form-group'">
         <div id="bundle-name">
           <label class="govuk-label" for="name">
             Bundle name <span>&#42;</span>
@@ -10,7 +10,12 @@
           <span id="first-name-error" class="govuk-error-message" *ngIf="bundleName.touched && !bundleName.valid">
             Enter the name for the bundle
           </span>
-          <input [className]="bundleName.touched && !bundleName.valid ? 'govuk-input govuk-input--error' : 'govuk-input'" id="name" type="text" required [(ngModel)]="name" name="name" #bundleName="ngModel">
+          <input id="name" type="text"
+                 required
+                 [ngModel]="name"
+                 name="name"
+                 #bundleName="ngModel"
+                 [ngClass]="bundleName.touched && !bundleName.valid ? 'govuk-input govuk-input--error' : 'govuk-input'">
         </div>
       </div>
       <div class="govuk-form-group">
