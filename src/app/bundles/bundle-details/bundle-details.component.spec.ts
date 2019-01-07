@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BundleDetailsComponent } from './bundle-details.component';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 describe('BundleDetailsComponent', () => {
@@ -12,7 +13,11 @@ describe('BundleDetailsComponent', () => {
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
       declarations: [ BundleDetailsComponent ],
-      schemas: [NO_ERRORS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA],
+      providers: [
+        Location,
+        { provide: LocationStrategy, useClass: PathLocationStrategy },
+      ]
     })
     .compileComponents();
   }));
