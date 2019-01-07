@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DocumentSelectionComponent } from './document-selection.component';
-import {NO_ERRORS_SCHEMA, QueryList} from '@angular/core';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('DocumentSelectionComponent', () => {
   let component: DocumentSelectionComponent;

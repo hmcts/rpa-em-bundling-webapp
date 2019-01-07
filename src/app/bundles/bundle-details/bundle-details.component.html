@@ -10,12 +10,13 @@
           <span id="first-name-error" class="govuk-error-message" *ngIf="bundleName.touched && !bundleName.valid">
             Enter the name for the bundle
           </span>
-          <input id="name" type="text"
+          <input [ngClass]="bundleName.touched && !bundleName.valid ? 'govuk-input govuk-input--error' : 'govuk-input'"
+                 id="name"
+                 type="text"
                  required
                  [ngModel]="name"
                  name="name"
-                 #bundleName="ngModel"
-                 [ngClass]="bundleName.touched && !bundleName.valid ? 'govuk-input govuk-input--error' : 'govuk-input'">
+                 #bundleName="ngModel">
         </div>
       </div>
       <div class="govuk-form-group">
@@ -29,5 +30,5 @@
     </form>
   </div>
   <a routerLink="/bundle/import/:id" class="govuk-button" id="next" (click)="saveBundleDetails()">Save</a>
-  <a routerLink="/bundle/import/:id" class="govuk-button" id="back" (click)="this.location.back()">Back</a>
+  <a class="govuk-button" id="back" (click)="this.location.back()">Back</a>
 </div>
