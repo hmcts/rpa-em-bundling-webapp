@@ -11,23 +11,23 @@ export class LoadBundleDocumentsSuccess implements Action {
   }
 }
 
-export const SAVE_BUNDLE_DOCUMENTS = '[c2i] save bundle documents';
+export const STITCH_BUNDLE = '[c2i] stitch bundle';
 
-export class SaveBundleDocuments implements Action {
+export class StitchBundle implements Action {
 
-  readonly type = SAVE_BUNDLE_DOCUMENTS;
+  readonly type = STITCH_BUNDLE;
 
   constructor(public payload: BundleDocument[]) {
   }
 }
 
-export const SAVE_BUNDLE_DOCUMENTS_SUCCESS = '[c2i] save bundle documents success';
+export const STITCH_BUNDLE_SUCCESS = '[c2i] stitch bundle success';
 
-export class SaveBundleDocumentsSuccess implements Action {
+export class StitchBundleSuccess implements Action {
 
-  readonly type = SAVE_BUNDLE_DOCUMENTS_SUCCESS;
+  readonly type = STITCH_BUNDLE_SUCCESS;
 
-  constructor(public payload: BundleDocument[]) {
+  constructor(public payload: string) {
   }
 }
 
@@ -40,4 +40,4 @@ export class ApiError implements Action {
   }
 }
 
-export type BundlePageAction = LoadBundleDocumentsSuccess | SaveBundleDocuments | SaveBundleDocumentsSuccess;
+export type BundlePageAction = LoadBundleDocumentsSuccess | StitchBundle | StitchBundleSuccess;

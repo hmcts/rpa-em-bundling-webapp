@@ -4,26 +4,25 @@ import { Action, Store } from "@ngrx/store";
 import { State } from "../shared/bundle.interfaces";
 import { BundleService } from "../shared/bundle.service";
 import { Observable, of } from "rxjs";
-import { catchError, map, switchMap, withLatestFrom } from "rxjs/operators";
+import { catchError, map, switchMap } from "rxjs/operators";
 import {
   ApiError,
-  SAVE_BUNDLE_DOCUMENTS,
-  SaveBundleDocuments,
-  SaveBundleDocumentsSuccess
+  STITCH_BUNDLE,
+  StitchBundle,
+  StitchBundleSuccess
 } from "./bundle-page.actions";
 
 @Injectable()
-export class ActionPlanEffects {
+export class BundlePageEffects {
 
   @Effect()
-  saveBundleDocument$: Observable<Action> = this.actions$
+  stitchBundle$: Observable<Action> = this.actions$
     .pipe(
-      ofType<SaveBundleDocuments>(SAVE_BUNDLE_DOCUMENTS),
-      withLatestFrom(this.store.select(state => state.documents)),
-      switchMap(([action,]) => this.service
-        .saveBundleDocuments(action.payload)
+      ofType<StitchBundle>(STITCH_BUNDLE),
+      switchMap(action => this.service
+        .stitchBundle(action.payload)
         .pipe(
-          map(response => new SaveBundleDocumentsSuccess(response)),
+          map(response => new StitchBundleSuccess(response)),
           catchError(error => of(new ApiError(error)))
         )
       )

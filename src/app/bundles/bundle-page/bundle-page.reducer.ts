@@ -3,7 +3,8 @@ import { BundlePageAction } from "./bundle-page.actions";
 import { State } from "../shared/bundle.interfaces";
 
 const initialState: State = {
-  documents: []
+  documents: [],
+  stitchedPdf: ''
 };
 
 export const bundleReducer = (state: State = initialState, action: BundlePageAction): State => {
@@ -14,10 +15,10 @@ export const bundleReducer = (state: State = initialState, action: BundlePageAct
         ...state,
         documents: action.payload
       };
-    case BundlePageActions.SAVE_BUNDLE_DOCUMENTS_SUCCESS:
+    case BundlePageActions.STITCH_BUNDLE_SUCCESS:
       return {
         ...state,
-        documents: action.payload
+        stitchedPdf: action.payload
       };
     default:
       return state;

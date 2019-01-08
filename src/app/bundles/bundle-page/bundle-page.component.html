@@ -1,2 +1,28 @@
-<app-panel [title]=bundleTitle [description]=bundleDescription></app-panel>
-<bundle-documents [documents]="documents$ | async"></bundle-documents>
+<div class="govuk-grid-column-one-quarter">
+  <button type="submit" class="govuk-button">
+    Edit bundle details
+  </button>
+</div>
+<div class="govuk-grid-column-full">
+  <app-panel [title]=bundleTitle [description]=bundleDescription></app-panel>
+</div>
+<div class="govuk-grid-column-one-quarter">
+  <button type="submit" class="govuk-button">
+    Duplicate bundle
+  </button>
+</div>
+<div class="govuk-grid-column-one-quarter">
+  <button type="submit" class="govuk-button">
+    Archive bundle
+  </button>
+</div>
+<div class="govuk-grid-column-one-third">
+  <button type="submit" class="govuk-button">
+    Add/Remove documents
+  </button>
+</div>
+<div class="govuk-grid-column-full">
+  <bundle-documents [documents]="documents$ | async"
+                    (stitchBundle)="stitchBundle($event)">
+  </bundle-documents>
+</div>

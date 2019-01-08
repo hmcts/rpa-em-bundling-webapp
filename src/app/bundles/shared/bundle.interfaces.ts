@@ -20,4 +20,5 @@ export class CaseDocument {
 
 export interface State {
   documents: BundleDocument[];
+  stitchedPdf: string
 }

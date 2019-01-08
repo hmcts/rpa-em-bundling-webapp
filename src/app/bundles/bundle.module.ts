@@ -11,12 +11,15 @@ import { PanelComponent } from './shared/panel/panel.component';
 import { BundleDocumentsComponent } from "./bundle-page/documents/documents.component";
 import { StoreModule } from '@ngrx/store';
 import { bundleReducer } from "./bundle-page/bundle-page.reducer";
+import { BundlePageEffects } from "./bundle-page/bundle-page.effects";
 import { BundleService } from "./shared/bundle.service";
 import { HttpClientModule } from "@angular/common/http";
+import { EffectsModule } from "@ngrx/effects";
 
 @NgModule({
   imports: [
     StoreModule.forRoot({ bundle: bundleReducer }),
+    EffectsModule.forRoot([BundlePageEffects]),
     CommonModule,
     HttpClientModule,
     FormsModule,
@@ -30,6 +33,6 @@ import { HttpClientModule } from "@angular/common/http";
     DocumentItemComponent,
     PanelComponent
   ],
-  providers: [BundleService]
+  providers: [BundleService, BundlePageEffects]
 })
 export class BundleModule {}

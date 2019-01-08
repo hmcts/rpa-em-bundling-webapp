@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { BundleDocument } from "../../shared/bundle.interfaces";
 
 @Component({
@@ -8,7 +8,8 @@ import { BundleDocument } from "../../shared/bundle.interfaces";
 export class BundleDocumentsComponent {
 
   @Input() documents: BundleDocument[];
+  @Output() stitchBundle = new EventEmitter<BundleDocument[]>();
 
-  constructor() {
-  }
+  constructor() {}
+
 }

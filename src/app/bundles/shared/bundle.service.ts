@@ -17,8 +17,8 @@ export class BundleService {
     return this.http.get<BundleDocument[]>(`${this.backendUrl}/bundle-documents`);
   }
 
-  saveBundleDocuments(documents: BundleDocument[]): Observable<BundleDocument[]> {
-    return this.http.post<BundleDocument[]>(`${this.backendUrl}/save-bundle-documents`, documents);
+  stitchBundle(documents: BundleDocument[]): Observable<string> {
+    return this.http.post<string>(`${this.backendUrl}/stitch-bundle`, documents);
   }
 
 }

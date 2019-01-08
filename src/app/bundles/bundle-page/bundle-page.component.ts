@@ -2,12 +2,11 @@ import { Component, Input } from '@angular/core';
 import { BundleDocument, State } from "../shared/bundle.interfaces";
 import { Store } from '@ngrx/store';
 import { Observable } from "rxjs";
-import { SaveBundleDocuments } from "./bundle-page.actions";
+import { StitchBundle } from "./bundle-page.actions";
 
 @Component({
   selector: 'app-bundle-page',
-  templateUrl: './bundle-page.component.html',
-  styleUrls: ['./bundle-page.component.scss']
+  templateUrl: './bundle-page.component.html'
 })
 export class BundlePageComponent {
 
@@ -21,7 +20,7 @@ export class BundlePageComponent {
     this.bundleDescription = 'Bundle description';
   }
 
-  saveBundleDocuments(documents: BundleDocument[]) {
-    this.store.dispatch(new SaveBundleDocuments(documents));
+  stitchBundle(documents: BundleDocument[]) {
+    this.store.dispatch(new StitchBundle(documents));
   }
 }
