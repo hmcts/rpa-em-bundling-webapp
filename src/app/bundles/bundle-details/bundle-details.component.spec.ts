@@ -31,4 +31,21 @@ describe('BundleDetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('saveBundleDetails', () => {
+    it('should save bundle details', function () {
+      spyOn(console, 'log');
+      component.saveBundleDetails();
+      expect(console.log).toHaveBeenCalled();
+    });
+  });
+
+  describe('onBack', () => {
+    it('should return back to the last route location', function () {
+      const location = fixture.debugElement.injector.get(Location);
+      spyOn(location, 'back');
+      component.onBack();
+      expect(location.back).toHaveBeenCalled();
+    });
+  });
 });
