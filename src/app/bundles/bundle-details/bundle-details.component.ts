@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-bundle-details',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BundleDetailsComponent implements OnInit {
 
-  constructor() { }
+  name: string;
+  description: string;
+
+  constructor(private location: Location) { }
 
   ngOnInit() {
+  }
+
+  saveBundleDetails() {
+    console.log('name: ' + this.name + ' bundle description: ' + this.description);
+  }
+
+  onBack() {
+    this.location.back();
   }
 
 }

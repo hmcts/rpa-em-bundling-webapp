@@ -44,5 +44,6 @@ version
 yarn.lock
 
 report/
+reports/tests/coverage/ng/
 
 dist

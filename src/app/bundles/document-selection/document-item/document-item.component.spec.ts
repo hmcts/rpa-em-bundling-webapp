@@ -26,4 +26,11 @@ describe('DocumentItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  describe('updateCheck', () => {
+    it('should store the opposite boolean of checked', function () {
+      component.updateCheck();
+      expect(component.checked).toBeTruthy();
+    });
+  });
 });
