@@ -1,11 +1,11 @@
-import { Injectable } from "@angular/core";
-import { CanActivate } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { CanActivate } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { State } from "../shared/bundle.interfaces";
-import { Observable, of } from "rxjs";
-import { catchError, map, switchMap, take, tap } from "rxjs/operators";
-import { BundleService } from "../shared/bundle.service";
-import { LoadBundleDocumentsSuccess } from "./bundle-page.actions";
+import { State } from '../shared/bundle.interfaces';
+import { Observable, of } from 'rxjs';
+import { catchError, map, switchMap, take, tap } from 'rxjs/operators';
+import { BundleService } from '../shared/bundle.service';
+import { LoadBundleDocumentsSuccess } from './bundle-page.actions';
 
 
 @Injectable()

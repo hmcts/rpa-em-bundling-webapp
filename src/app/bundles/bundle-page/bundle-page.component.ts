@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-import { BundleDocument, State } from "../shared/bundle.interfaces";
+import { BundleDocument, State } from '../shared/bundle.interfaces';
 import { Store } from '@ngrx/store';
-import { Observable } from "rxjs";
-import { StitchBundle } from "./bundle-page.actions";
-import { ActivatedRoute, ParamMap } from "@angular/router";
+import { Observable } from 'rxjs';
+import { StitchBundle } from './bundle-page.actions';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-bundle-page',

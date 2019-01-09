@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BundleDocumentsComponent } from "./documents.component";
+import { BundleDocumentsComponent } from './documents.component';
 
 describe('BundleDocumentsComponent', () => {
   let component: BundleDocumentsComponent;

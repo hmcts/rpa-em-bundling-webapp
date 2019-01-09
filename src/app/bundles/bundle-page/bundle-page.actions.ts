@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { BundleDocument } from "../shared/bundle.interfaces";
+import { BundleDocument } from '../shared/bundle.interfaces';
 
 export const LOAD_BUNDLE_DOCUMENTS_SUCCESS = '[c2i] load bundle page actions';
 

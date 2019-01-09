@@ -1,6 +1,6 @@
-import * as BundlePageActions from "./bundle-page.actions";
-import { BundlePageAction } from "./bundle-page.actions";
-import { State } from "../shared/bundle.interfaces";
+import * as BundlePageActions from './bundle-page.actions';
+import { BundlePageAction } from './bundle-page.actions';
+import { State } from '../shared/bundle.interfaces';
 
 const initialState: State = {
   documents: [],
