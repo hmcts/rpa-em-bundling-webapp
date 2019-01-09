@@ -1,4 +1,4 @@
-import { CaseDocument } from './casedocument';
+import { CaseDocument } from './bundle.interfaces';
 
 export const MockCaseDocuments: CaseDocument[] = [
   { id: 1, name: 'Marriage Certificate', DM_URI: 'example_url', folder: 'Certificates' },

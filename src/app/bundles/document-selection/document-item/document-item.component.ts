@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-document-item',
@@ -11,7 +11,8 @@ export class DocumentItemComponent implements OnInit {
 
   @Input() document;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     this.checked = false;

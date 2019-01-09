@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {HttpClient} from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { throwError } from 'rxjs';
 
 @Injectable()
 export class AppConfig {
-
-  public static readonly CONFIG_PATH = '/assets/config.json';
 
   private config: Config;
 
@@ -29,7 +27,7 @@ export class AppConfig {
           }, error => {
             console.error('Configuration file "config.json" could not be read');
             reject();
-            return Observable.throw(error.json().error || 'Server error');
+            return throwError(error.json().error || 'Server error');
           });
     });
   }

@@ -1,8 +1,10 @@
 const express = require("express");
-const config = require("./config/default");
-let proxy = require("http-proxy-middleware");
-let http = require("http");
-let app = express();
+const config = require("config/default");
+const proxy = require("http-proxy-middleware");
+const http = require("http");
+const app = express();
+const backendStub = require(`${__dirname}/src/backend-stub`);
+
 
 app.use((req, res, next) => {
   req.headers["user-id"] = "12";
@@ -25,13 +27,25 @@ app.use("/demproxy", proxy({
   }
 ));
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(express.static("dist"));
 app.use("/summary", express.static(__dirname + "/dist"));
+
 app.get("/health", (req, res) => {
   res.send({
     status: "UP"
   });
 });
+
+app.use("/", backendStub);
+
+
+
 app.get("/config", (req, res) => {
   res.send(config);
 });
